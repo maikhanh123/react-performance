@@ -4,6 +4,8 @@ import UsePureComponent from "./component/UsePureComponent";
 import Navbar from "./component/Navbar";
 import Home from "./component/Home";
 import UseReactMemo from "./component/UseReactMemo";
+import UserShouldComponentUpdate from "./component/UserShouldComponentUpdate";
+import UseLazyLoading from "./component/UseLazyLoading";
 
 export default class App extends React.Component {
   render() {
@@ -13,8 +15,16 @@ export default class App extends React.Component {
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route exact path="/reactMemo" component={UseReactMemo} />
-            <Route exact path="/pureComponent" component={UsePureComponent} />
+            <Route path="/reactMemo" component={UseReactMemo} />
+            <Route path="/pureComponent" component={UsePureComponent} />
+            <Route
+              path="/lazyLoading"
+              component={props => <UseLazyLoading name="Anshul" />}
+            />
+            <Route
+              path="/shouldComponentUpdate"
+              component={UserShouldComponentUpdate}
+            />
           </Switch>
         </main>
       </React.Fragment>

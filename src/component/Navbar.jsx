@@ -16,6 +16,12 @@ export default class Navbar extends Component {
             <NavLink className="nav-item nav-link" to="/reactMemo">
               React Memo{" "}
             </NavLink>
+            <NavLink className="nav-item nav-link" to="/shouldComponentUpdate">
+              Should Component Update{" "}
+            </NavLink>
+            <NavLink className="nav-item nav-link" to="/lazyLoading">
+              LazyLoading{" "}
+            </NavLink>
           </div>
         </div>
       </nav>
