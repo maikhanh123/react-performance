@@ -17,6 +17,7 @@ class PureChildComponent extends React.PureComponent {
 }
 
 export default class UsePureComponent extends React.Component {
+  _isMounted = false;
   constructor() {
     super();
     this.state = {
@@ -26,14 +27,22 @@ export default class UsePureComponent extends React.Component {
 
   updateState = () => {
     setInterval(() => {
-      this.setState({
-        name: "Mayank 2"
-      });
-    }, 10000);
+      if (this._isMounted) {
+        this.setState({
+          name: "Mayank 2"
+        });
+      }
+    }, 5000);
   };
 
   componentDidMount() {
+    console.log("Is Mounted ====>", this._isMounted);
+    this._isMounted = true;
     this.updateState();
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   render() {

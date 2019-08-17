@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light mb-3">
         <Link className="navbar-brand" to="/">
           Home
         </Link>
@@ -12,6 +12,9 @@ export default class Navbar extends Component {
           <div className="navbar-nav">
             <NavLink className="nav-item nav-link" to="/pureComponent">
               Pure Component{" "}
+            </NavLink>
+            <NavLink className="nav-item nav-link" to="/reactMemo">
+              React Memo{" "}
             </NavLink>
           </div>
         </div>
