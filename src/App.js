@@ -6,6 +6,10 @@ import Home from "./component/Home";
 import UseReactMemo from "./component/UseReactMemo";
 import UserShouldComponentUpdate from "./component/UserShouldComponentUpdate";
 import UseLazyLoading from "./component/UseLazyLoading";
+import AvoidInlineFunction from "./component/AvoidInlineFunction";
+import BindFunction from "./component/BindFunction";
+import OptimizeConditionalRendering from "./component/OptimizeConditionalRendering";
+import { ErrorBoundaries } from "./component/ErrorBoundaries";
 
 export default class App extends React.Component {
   render() {
@@ -25,6 +29,13 @@ export default class App extends React.Component {
               path="/shouldComponentUpdate"
               component={UserShouldComponentUpdate}
             />
+            <Route path="/inlineFunction" component={AvoidInlineFunction} />
+            <Route path="/bindFunction" component={BindFunction} />
+            <Route
+              path="/optimizeCondition"
+              component={OptimizeConditionalRendering}
+            />
+            <Route path="/errorBoundaries" component={ErrorBoundaries} />
           </Switch>
         </main>
       </React.Fragment>

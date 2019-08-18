@@ -22,6 +22,18 @@ export default class Navbar extends Component {
             <NavLink className="nav-item nav-link" to="/lazyLoading">
               LazyLoading{" "}
             </NavLink>
+            <NavLink className="nav-item nav-link" to="/inlineFunction">
+              Inline Function{" "}
+            </NavLink>
+            <NavLink className="nav-item nav-link" to="/bindFunction">
+              Bind Function{" "}
+            </NavLink>
+            <NavLink className="nav-item nav-link" to="/optimizeCondition">
+              Optimize Condition{" "}
+            </NavLink>
+            <NavLink className="nav-item nav-link" to="/errorBoundaries">
+              Error Boundaries{" "}
+            </NavLink>
           </div>
         </div>
       </nav>

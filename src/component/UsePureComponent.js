@@ -37,6 +37,7 @@ export default class UsePureComponent extends React.Component {
 
   componentDidMount() {
     console.log("Is Mounted ====>", this._isMounted);
+    console.log("Component Did Mount");
     this._isMounted = true;
     this.updateState();
   }
